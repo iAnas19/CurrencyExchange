@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #444444;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #313131;
+}
+::-webkit-scrollbar-thumb {
+  background: #d6d6d6;
+  border-radius: 5px 0px 0px 5px;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #ebebeb;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.news-feed {
+  color: #f6f6f6;
+  background-color: #272727;
+  padding: 10px 30px;
+  margin: 5px;
+  max-width: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  height: fit-content;
+  /* display: none; */
+}
+
+.currency-converter {
+  height: fit-content;
+  max-height: 490px;
+  color: #f6f6f6;
+  background-color: #272727;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.exchange-rate {
+  color: #f6f6f6;
+
+  background-color: #161515;
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.input-box {
+  background-color: #161515;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+button {
+  border: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px 0px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  background-color: #00c251;
+  color: #e6e6e6;
+  transition: 0.2s all ease-in;
+}
+
+button:hover {
+  background-color: #00943e;
+}
+
+input,
+select {
+  border: none;
+  outline: none;
+  padding: 2px;
+  background-color: #272727;
+  color: #e6e6e6;
+}
+
+input:focus,
+input:active {
+  outline: none;
+}
+
+a {
+  color: #bbffd1;
+  text-decoration: none;
+  transition: 0.2s all ease;
+}
+a:hover {
+  color: white;
+}
+
+.green {
+  color: #00c251;
+}
+
+@media (max-width: 700px) {
+  .app {
+    margin-top: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .currency-converter {
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+  }
+  .news-feed {
+    overflow: visible;
+  }
+}
+@media (max-width: 400px) {
+  .app {
+    margin-top: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .currency-converter {
+    width: 90%;
+  }
+  .indicator {
+    display: none;
+  }
+  .input-box {
+    display: flex;
+    flex-direction: column;
+  }
+  .news-feed {
+    width: 90%;
+
+    overflow: visible;
+  }
+}
