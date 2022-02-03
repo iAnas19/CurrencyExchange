@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #444444;
+  background-color: #363636;
 }
 
 ::-webkit-scrollbar {
@@ -16,7 +16,7 @@ body {
 }
 ::-webkit-scrollbar-thumb {
   background: #d6d6d6;
-  border-radius: 5px 0px 0px 5px;
+  border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:active {
   background: #ebebeb;
@@ -35,15 +35,21 @@ code {
 }
 
 .news-feed {
+  overflow: hidden;
   color: #f6f6f6;
   background-color: #272727;
   padding: 10px 30px;
-  margin: 5px;
-  max-width: 400px;
+  margin: 20px 5px 5px 5px;
+  max-width: 340px;
   border-radius: 10px;
-  overflow: hidden;
-  height: fit-content;
-  /* display: none; */
+
+  /* height: fit-content; */
+  height: 490px;
+  overflow-y: scroll;
+}
+
+.news-feed::-webkit-scrollbar-track {
+  border-radius: 5px;
 }
 
 .currency-converter {
@@ -52,14 +58,13 @@ code {
   color: #f6f6f6;
   background-color: #272727;
   padding: 10px;
-  margin: 5px;
+  margin: 20px 5px 5px 5px;
   text-align: center;
   border-radius: 10px;
 }
 
 .exchange-rate {
   color: #f6f6f6;
-
   background-color: #161515;
   padding: 20px;
   margin-top: 10px;
@@ -88,6 +93,10 @@ button {
 
 button:hover {
   background-color: #00943e;
+}
+
+.lists {
+  margin: 0px 0px 10px -20px;
 }
 
 input,
@@ -119,7 +128,7 @@ a:hover {
 
 @media (max-width: 700px) {
   .app {
-    margin-top: 230px;
+    margin-top: 320px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -131,7 +140,9 @@ a:hover {
     flex-direction: column;
   }
   .news-feed {
-    overflow: visible;
+    overflow: hidden;
+    min-height: 700px;
+    overflow-y: scroll;
   }
 }
 @media (max-width: 400px) {
@@ -153,8 +164,6 @@ a:hover {
     flex-direction: column;
   }
   .news-feed {
-    width: 90%;
-
-    overflow: visible;
+    /* width: 90%; */
   }
 }
